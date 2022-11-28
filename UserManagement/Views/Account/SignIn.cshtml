@@ -1,0 +1,35 @@
+﻿@model UserManagement.Models.SignInViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+</head>
+<body>
+    
+<div class="form-container">
+    <div class="form">
+    <h4>SignIn</h4>
+    <hr/>
+    <form asp-action="SignIn">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control"/>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Sign in" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+</html>
